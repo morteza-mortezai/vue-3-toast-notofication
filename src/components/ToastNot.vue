@@ -54,5 +54,8 @@ const textColor = computed(() => {
 </template>
 
 <style scoped>
-
+.toast-notif {
+  background-color: v-bind("color");
+  color: v-bind("textColor");
+}
 </style>
