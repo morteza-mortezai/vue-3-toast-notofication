@@ -2,16 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-.toast-notif {
-    position: fixed;
-    top: -200px;
-    right: 50px;
-    border-radius: 4px;
-    padding: 10px;
-    width: 300px;
-    transition: all 0.3s ease-in-out;
-}
-
-.show {
-    top: 20px;
-}

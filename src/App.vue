@@ -6,7 +6,8 @@ const msg = ref("");
 
 <template>
   <header>
-    <ToastNot :msg="msg" type="error" class="hover:bg-green-700" />
+    xcvxcv
+    <ToastNot :msg="msg" type="error"  />
   </header>
   <input type="text" v-model="msg" />
   <main>

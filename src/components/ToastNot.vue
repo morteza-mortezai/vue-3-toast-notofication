@@ -22,7 +22,9 @@ const color = computed(() => {
     // code block
   }
 });
+
 const innerMsg = ref<null | string | undefined>(null);
+
 watch(
   () => props.msg,
   (newVal, oldVal) => {
@@ -35,6 +37,7 @@ watch(
     }
   }
 );
+
 const textColor = computed(() => {
   switch (!!props.type) {
     case false:
@@ -45,17 +48,29 @@ const textColor = computed(() => {
     // code block
   }
 });
+
 </script>
 
 <template>
-  <div class="toast-notif" style="ba" :class="{ show: !!innerMsg }">
+  <div class="toast-notif" :class="[{ show: !!innerMsg }]">
     {{ innerMsg }}
   </div>
 </template>
 
 <style scoped>
 .toast-notif {
+  position: fixed;
+  top: -200px;
+  right: 50px;
+  border-radius: 4px;
+  padding: 10px;
+  width: 300px;
+  transition: all 0.3s ease-in-out;
   background-color: v-bind("color");
   color: v-bind("textColor");
+}
+
+.show {
+  top: 20px;
 }
 </style>
